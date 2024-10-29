@@ -1,8 +1,25 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:space/theme.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushNamedAndRemoveUntil(
+          context, '/onboarding', (route) => false);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +34,10 @@ class SplashPage extends StatelessWidget {
               height: 82,
               margin: const EdgeInsets.only(right: 16),
               decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/images/logo_light.png'))),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/logo_light.png'),
+                ),
+              ),
             ),
             Text(
               "Space",
