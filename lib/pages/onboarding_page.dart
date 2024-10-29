@@ -60,7 +60,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.animateToPage(2);
+                    // Navigator.pushNamed(context, '/sign-in');
+                  },
                   child: Text(
                     'SKIP',
                     style: blackTextStyle.copyWith(
@@ -104,7 +107,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 ),
                 TextButton(
                   onPressed: () {
-                    controller.nextPage();
+                    if (currentIndex == 2) {
+                      Navigator.pushNamed(context, '/sign-in');
+                    } else {
+                      controller.nextPage();
+                    }
                   },
                   child: Text(
                     'NEXT',

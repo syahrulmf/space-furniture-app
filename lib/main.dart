@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:space/pages/home_page.dart';
 import 'package:space/pages/onboarding_page.dart';
+import 'package:space/pages/signin_page.dart';
 import 'package:space/pages/splash_page.dart';
 
 void main() {
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) => const SplashPage(),
-        '/onboarding': (context) => const OnboardingPage()
+        '/onboarding': (context) => const OnboardingPage(),
+        '/sign-in': (context) => const SignInPage(),
+        '/home': (context) => const HomePage(),
       },
     );
   }
