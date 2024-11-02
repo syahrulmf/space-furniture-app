@@ -91,33 +91,38 @@ class _HomePageState extends State<HomePage> {
               ),
 
               // NOTE: SEARCH BAR
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 30,
-                  left: 24,
-                  right: 24,
-                ),
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14),
-                  color: kWhiteColor,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Search Furniture',
-                      style: greyTextStyle.copyWith(
-                        fontSize: 16,
-                        fontWeight: semiBold,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/search');
+                },
+                child: Container(
+                  margin: const EdgeInsets.only(
+                    top: 30,
+                    left: 24,
+                    right: 24,
+                  ),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    color: kWhiteColor,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Search Furniture',
+                        style: greyTextStyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: semiBold,
+                        ),
                       ),
-                    ),
-                    Image.asset(
-                      'assets/icons/search_icon.png',
-                      width: 24,
-                      color: kGreyColor,
-                    )
-                  ],
+                      Image.asset(
+                        'assets/icons/search_icon.png',
+                        width: 24,
+                        color: kGreyColor,
+                      )
+                    ],
+                  ),
                 ),
               ),
 
@@ -154,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                 child: CarouselSlider(
                   items: const [
                     HomeCategoryItem(
-                      title: "Minimalis Cahir",
+                      title: "Minimalis Chair",
                       subtitle: "Chair",
                       imageUrl: 'assets/images/product_category1.png',
                     ),
@@ -270,20 +275,20 @@ class _HomePageState extends State<HomePage> {
                         child: Row(
                           children: [
                             HomePopularItem(
-                              title: 'Poan Chair',
-                              imageUrl: "assets/images/product_category1.png",
+                              title: 'Poan Sofa',
+                              imageUrl: "assets/images/product_category4.png",
                               price: 34,
                               isWishlist: true,
                             ),
                             HomePopularItem(
-                              title: 'Poan Table',
-                              imageUrl: "assets/images/product_category2.png",
+                              title: 'Poan Chair',
+                              imageUrl: "assets/images/product_category3.png",
                               price: 32,
                               isWishlist: false,
                             ),
                             HomePopularItem(
-                              title: 'Poan Chair',
-                              imageUrl: "assets/images/product_category3.png",
+                              title: 'Poan Table',
+                              imageUrl: "assets/images/product_category2.png",
                               price: 34,
                               isWishlist: false,
                             ),
