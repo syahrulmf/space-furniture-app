@@ -130,8 +130,10 @@ class _SearchResultPageState extends State<SearchResultPage> {
 
   Widget buildBody() {
     return ListView(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24,
+      padding: const EdgeInsets.only(
+        right: 24,
+        left: 24,
+        bottom: 24,
       ),
       children: [
         const SizedBox(
