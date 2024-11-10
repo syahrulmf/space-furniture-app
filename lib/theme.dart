@@ -10,6 +10,7 @@ Color kWhiteColor = const Color(0xFFFFFFFF);
 Color kRedColor = const Color(0xFFFF314A);
 Color kYellowColor = const Color(0xFFFFBA00);
 Color kBlueColor = const Color(0xFF2972FF);
+Color kDarkBackgroundColor = const Color(0xFF252836);
 
 TextStyle blackTextStyle = GoogleFonts.nunito(color: kBlackColor);
 TextStyle blackAccentTextStyle = GoogleFonts.nunito(color: kBlackAccentColor);

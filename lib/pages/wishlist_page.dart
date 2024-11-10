@@ -15,7 +15,6 @@ class _WishlistPageState extends State<WishlistPage> {
 
   @override
   void initState() {
-
     super.initState();
 
     Future.delayed(const Duration(seconds: 2), () {
@@ -79,14 +78,20 @@ class _WishlistPageState extends State<WishlistPage> {
         ],
       ),
       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: const BorderRadius.vertical(
+          top: Radius.circular(5),
+        ),
         child: BottomNavigationBar(
           showUnselectedLabels: false,
           showSelectedLabels: false,
           backgroundColor: kWhiteColor,
           onTap: (value) {
-            if(value == 0){
+            if (value == 0) {
               Navigator.pushNamed(context, '/home');
+            }
+
+            if (value == 2) {
+              Navigator.pushNamed(context, '/profile');
             }
           },
           items: [

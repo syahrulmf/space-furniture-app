@@ -20,14 +20,20 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: kWhiteGreyColor,
       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: const BorderRadius.vertical(
+          top: Radius.circular(5),
+        ),
         child: BottomNavigationBar(
           showUnselectedLabels: false,
           showSelectedLabels: false,
           backgroundColor: kWhiteColor,
           onTap: (value) {
-            if(value == 1){
+            if (value == 1) {
               Navigator.pushNamed(context, '/wishlist');
+            }
+
+            if (value == 2) {
+              Navigator.pushNamed(context, '/profile');
             }
           },
           items: [
